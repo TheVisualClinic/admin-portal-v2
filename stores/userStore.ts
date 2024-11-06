@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 
-export const useAppStore = defineStore('appStore', {
+export const useUserStore = defineStore('userStore', {
   state: () => ({
     userId: '',
     username: '',

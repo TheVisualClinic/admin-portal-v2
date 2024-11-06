@@ -1,7 +1,9 @@
 <template>
-  <v-app>
+  <v-layout>
     <v-main>
-      <slot />
+      <NuxtPage />
     </v-main>
-  </v-app>
+    <!-- Page Loading -->
+    <BasePageLoading />
+  </v-layout>
 </template>

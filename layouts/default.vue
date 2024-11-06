@@ -1,16 +1,16 @@
 <template>
-  <v-app>
-    <!-- Navigation Drawer (Sidebar) -->
+  <v-layout>
+    <!-- Side Bar -->
     <LayoutNavigationDrawer />
-
-    <!-- App Bar (Top Bar) -->
+    <!-- App Bar -->
     <LayoutAppBar />
-
-    <!-- Main Content Area -->
+    <!-- Main App Body -->
     <v-main>
       <v-container fluid>
-        <slot />
+        <NuxtPage />
       </v-container>
     </v-main>
-  </v-app>
+    <!-- Page Loading -->
+    <BasePageLoading />
+  </v-layout>
 </template>

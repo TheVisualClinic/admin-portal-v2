@@ -13,9 +13,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBaseUrl: 'https://crm.in-spect-pro.com',
-      // apiBaseUrl: 'http://10.10.50.90:3001',
-      liffId: '2006523485-lJeQJQ9V',
+      apiMainUrl: 'https://main.thevisual-clinic.com',
+      apiIdpUrl: 'https://idp.thevisual-clinic.com',
+      apiStorageUrl: 'https://storage.thevisual-clinic.com',
     },
   },
   modules: [

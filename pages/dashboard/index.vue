@@ -1,5 +1,5 @@
 <template>
-  <div class="c-container">
+  <div>
     <h1>Dashboard Page</h1>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
