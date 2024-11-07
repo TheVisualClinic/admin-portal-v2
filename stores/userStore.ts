@@ -2,72 +2,73 @@ import { defineStore } from 'pinia';
 
 export const useUserStore = defineStore('userStore', {
   state: () => ({
-    userId: '',
+    user_id: '',
     username: '',
-    userStatus: '',
+    user_status: '',
     profile: {
-      firstName: '',
-      lastName: '',
-      nickName: '',
+      first_name: '',
+      last_name: '',
+      nick_name: '',
       gender: '',
-      dateOfBirth: '',
-      profilePicture: '',
+      date_of_birth: '',
+      avatar_url: '',
     },
     contact: {
       email: '',
-      mobilePhone: '',
+      mobile_phone: '',
     },
     role: {
       role_id: 0,
       name: '',
     },
-    permissions: [],
+    permissions: [] as string[],
   }),
 
   actions: {
     setUserId(id: string) {
-      this.userId = id;
+      this.user_id = id;
     },
     setUsername(name: string) {
       this.username = name;
     },
     setUserStatus(status: string) {
-      this.userStatus = status;
+      this.user_status = status;
     },
     setProfile(profile: {
-      firstName: string;
-      lastName: string;
-      nickName: string;
-      gender: string;
-      dateOfBirth: string;
-      profilePicture: string;
+      first_name?: string;
+      last_name?: string;
+      nick_name?: string;
+      gender?: string;
+      date_of_birth?: string;
+      profile_picture?: string;
     }) {
       this.profile = { ...this.profile, ...profile };
     },
-    setContact(contact: { email: string; mobilePhone: string }) {
+    setContact(contact: { email?: string; mobile_phone?: string }) {
       this.contact = { ...this.contact, ...contact };
     },
     setRole(role: { role_id: number; name: string }) {
       this.role = { ...this.role, ...role };
     },
-    setPermissions(permissions: never[]) {
+    setPermissions(permissions: string[]) {
+      // แก้ชนิดข้อมูลให้ตรงกัน
       this.permissions = permissions;
     },
     clearUser() {
-      this.userId = '';
+      this.user_id = '';
       this.username = '';
-      this.userStatus = '';
+      this.user_status = '';
       this.profile = {
-        firstName: '',
-        lastName: '',
-        nickName: '',
+        first_name: '',
+        last_name: '',
+        nick_name: '',
         gender: '',
-        dateOfBirth: '',
-        profilePicture: '',
+        date_of_birth: '',
+        avatar_url: '',
       };
       this.contact = {
         email: '',
-        mobilePhone: '',
+        mobile_phone: '',
       };
       this.role = {
         role_id: 0,

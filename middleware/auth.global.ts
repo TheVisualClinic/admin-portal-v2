@@ -1,5 +1,4 @@
 export default defineNuxtRouteMiddleware(async (to) => {
-  const appStore = useAppStore();
   const { $idpApi } = useNuxtApp();
 
   const refreshToken = useCookie('_app_session');
@@ -25,10 +24,6 @@ export default defineNuxtRouteMiddleware(async (to) => {
   if (to.path === '' || to.path === '/') {
     return navigateTo('/dashboard');
   }
-
-  setTimeout(() => {
-    appStore.hiddenPageLoading();
-  }, 1000);
 
   async function handleCheckRefreshToken(token: string) {
     try {
